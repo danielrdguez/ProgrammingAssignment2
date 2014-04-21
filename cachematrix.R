@@ -34,8 +34,10 @@ cacheSolve <- function(x, ...) {
       return(i)
    }
    #### if inverse was not calculated previously
+   message("calculating inverse matrix")
    data <- x$get()
    i <- solve(data,...)
    x$setinv(i)
+   return(i)
 }
 
